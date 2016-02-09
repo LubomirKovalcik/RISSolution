@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{271E5C20-BE3D-4380-B183-30F2CE21F3B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BiznisObjects</RootNamespace>
+    <AssemblyName>BiznisObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAkcia.cs" />
+    <Compile Include="BDenne_menu.cs" />
+    <Compile Include="BDen_v_tyzdni.cs" />
+    <Compile Include="BJazyk.cs" />
+    <Compile Include="BJedlo.cs" />
+    <Compile Include="BSurovinaJedla.cs" />
+    <Compile Include="BManager.cs" />
+    <Compile Include="BMenu.cs" />
+    <Compile Include="BMenu_jedlo.cs" />
+    <Compile Include="BMenu_napoj.cs" />
+    <Compile Include="BNapoj.cs" />
+    <Compile Include="BNapoj_surovina.cs" />
+    <Compile Include="BObjednavka.cs" />
+    <Compile Include="BObjednavka_menu.cs" />
+    <Compile Include="BObrazok.cs" />
+    <Compile Include="BOtvaracie_hodiny.cs" />
+    <Compile Include="BPlatnost_zaznamu.cs" />
+    <Compile Include="BPodnik.cs" />
+    <Compile Include="BPreklad.cs" />
+    <Compile Include="BStol.cs" />
+    <Compile Include="BSurovina.cs" />
+    <Compile Include="BText.cs" />
+    <Compile Include="BTyp_jedla.cs" />
+    <Compile Include="BTyp_napoja.cs" />
+    <Compile Include="BTyp_uctu.cs" />
+    <Compile Include="BUcet.cs" />
+    <Compile Include="BZmena_otvaracich_hodin.cs" />
+    <Compile Include="ItemNotExistsExcpetion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransferTemplate.cs" />
+    <Compile Include="Zoznamy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseEntities\DatabaseParser\DatabaseEntities.csproj">
+      <Project>{8f5d620c-1c39-4fba-b432-30addd018631}</Project>
+      <Name>DatabaseEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TransferObjects\TransferObjects.csproj">
+      <Project>{59c66ef8-f6d3-4815-949f-73fac11fb896}</Project>
+      <Name>TransferObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
